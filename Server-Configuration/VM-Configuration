@@ -4,10 +4,10 @@ CHNAGE DEFAULT HOSTNAME:
   sudo -i
   
 - Type the hostnamectl command:
-  hostnamectl set-hostname newNameHere
+  hostnamectl set-hostname newHostname
 
 - Next Edit the /etc/hosts file:
-     - Delete the old name and setup new name.
+     - Delete the old name and input the new name created.
        nano /etc/hosts
        (For windows: Ctrl + X to exit | For Mac: Cmd + X to exit)
 
@@ -30,6 +30,9 @@ CREATE A NEW USER:
   echo "newUser  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/newUser
   OR
   echo "newUser   ALL=(ALL)       NOPASSWD: ALL" > /etc/sudoers.d/newUser
+ 
+ - Add user to a group
+   usermod -aG groupName userName
   
 ---------------------------------------------------------------------------------
 CHANGE DOCKER CONTAINER PASSWORD
