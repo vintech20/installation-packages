@@ -1,0 +1,49 @@
+CHNAGE DEFAULT HOSTNAME:
+=======================
+- Become root
+  sudo -i
+  
+- Type the hostnamectl command:
+  hostnamectl set-hostname newNameHere
+
+- Next Edit the /etc/hosts file:
+     - Delete the old name and setup new name.
+       nano /etc/hosts
+       (For windows: Ctrl + X to exit | For Mac: Cmd + X to exit)
+
+- Replace any occurrence of the existing computer name with your new hostname.
+  Reboot the system to changes take effect:
+  reboot
+  
+--------------------------------------------------------------------------------- 
+CREATE A NEW USER:
+=================
+- Become root 
+  sudo -i
+- Create a new user 
+  adduser newUser
+  
+- Enable user to run docker commands
+  usermod -aG docker newUser
+    
+- Disable password and add newUser to the Sudoers group 
+  echo "newUser  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/newUser
+  OR
+  echo "newUser   ALL=(ALL)       NOPASSWD: ALL" > /etc/sudoers.d/newUser
+  
+---------------------------------------------------------------------------------
+CHANGE DOCKER CONTAINER PASSWORD
+================================
+- Run this command to get inside the container 
+  docker exec -u 0 -it <MyContainer> bash
+  
+- Set the password
+  passwd
+  Enter new UNIX password: 
+  Retype new UNIX password:
+  
+  ------------------------------------------------------------------------------
+  MISCELLANUOUS SERVER COMMANDS:
+  =============================
+  
+    
