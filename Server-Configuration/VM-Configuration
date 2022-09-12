@@ -48,5 +48,19 @@ CHANGE DOCKER CONTAINER PASSWORD
   ------------------------------------------------------------------------------
   MISCELLANUOUS SERVER COMMANDS:
   =============================
+  - netstat -tunlpa = To check whether a port is open  
+                      - t = tcp connection  
+                      - u = udp connection 
+                      - n = portNumber  
+                      - l = listening  
+                      - p = program name   
+                      - a = all 
+ 
+ - df -h = check disk usage 
+ - telnet <serverIP> <serverPort> = To check whether the server is running/open (Jenkins, SonarQube etc)
+ - nslookup = (stands for “Name Server Lookup”) is a useful command for getting information from DNS server. 
+ - nohup = Nohup, short for no hang up is a command in Linux systems that keep processes running even after exiting the shell or terminal. 
+ - df -h = Check system resources
+ 
   
     
