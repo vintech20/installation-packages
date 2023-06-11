@@ -12,7 +12,7 @@ CHANGE DEFAULT HOSTNAME:
        (For windows: Ctrl + X to exit | For Mac: Cmd + X to exit)
 
 - Replace any occurrence of the existing computer name with your new hostname.
-  Reboot the system to changes take effect:
+  Reboot the system so changes take effect:
   reboot
   
 --------------------------------------------------------------------------------- 
